@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#10131b"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css"><title>Domino Arena</title></head>
+<body><div id="app">
+<header><div class="brand">DOMINO <span>ARENA</span></div><div id="netBadge" class="badge">LOCAL</div></header>
+<main>
+<section id="home" class="screen active"><div class="hero"><div class="heroTile">6|6</div><h1>Domino Arena</h1><p>Premium local multiplayer.</p></div>
+<div class="cards"><button class="primary" id="createBtn">＋ Create Game</button><button id="joinBtn">Join Game</button></div>
+<div class="modeRow"><button data-mode="2" class="mode active">2 Players</button><button data-mode="4" class="mode">4 Players</button></div>
+<div class="tip">Play on the same Wi‑Fi / Hotspot. No internet required in LAN mode.</div></section>
+<section id="lobby" class="screen"><div class="topline"><button class="back">‹</button><h2>Game Lobby</h2></div><div class="roomCard"><small>ROOM CODE</small><strong id="roomCode">----</strong><span id="roomHint">Waiting for a player…</span></div><div id="devices" class="deviceList"></div><button id="startBtn" class="primary" disabled>Start Game</button></section>
+<section id="game" class="screen"><div class="gameTop"><button id="leaveBtn">Exit</button><div><b id="turnText">Your turn</b><small id="scoreText">0 : 0</small></div><button id="soundBtn">🔊</button></div><div id="opponent" class="opponent"><span id="oppName">Opponent</span><span id="oppCount">7 tiles</span></div><div id="board" class="board"><div id="chain"></div><div id="emptyBoard">Play a tile to begin</div></div><div class="status" id="status">Waiting…</div><div id="hand" class="hand"></div><div class="actions"><button id="drawBtn">Draw</button><button id="passBtn">Pass</button></div></section>
+<section id="join" class="screen"><div class="topline"><button class="back">‹</button><h2>Join Game</h2></div><div class="joinBox"><input id="roomInput" placeholder="Room / Host ID"><button id="joinConfirm" class="primary">Connect</button></div><div id="joinList"></div></section>
+</main><div id="toast" class="toast"></div></div><script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script><script src="app.js"></script></body></html>
